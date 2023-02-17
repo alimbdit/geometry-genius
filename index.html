@@ -40,16 +40,17 @@
 
 <body class="w-full max-w-[1820px] font-custom">
     <!-- header -->
-    <header class="m-12  ">
+    <header class="m-5 md:m-12  ">
         <!-- ------------------------------------------------------
         --------------------navbar-------------------------------
     ----------------------------------------------------------- -->
-        <div class="navbar bg-sky-200 px-12 py-5 rounded">
+        <div class="navbar bg-sky-200 px-12 py-5 rounded flex flex-col md:flex-row justify-between gap-5">
+           
             <div class="flex-1">
                 <a class=" normal-case text-xl">
                     <div>
-                        <h1 class="text-4xl text-title1 font-bold ">Interactive</h1>
-                        <h4 class="text-title2 text-3xl font-medium ">Geometry Genius</h4>
+                        <h1 class="text-4xl text-title1 text-center md:text-left font-bold ">Interactive</h1>
+                        <h4 class="text-title2 text-3xl font-medium text-center md:text-left">Geometry Genius</h4>
                     </div>
                 </a>
             </div>
@@ -63,20 +64,23 @@
 
 
             </div>
+
         </div>
 
     </header>
 
     <!-- main -->
-    <main class="m-12">
-        <div class="flex">
+    <main class="m-5 md:m-12">
+        <div class="flex flex-col md:flex-row">
 
             <!-- ---------------------------------------------
             -----------------------card container---------------
         ---------------------------------------------------- -->
-            <div class="w-[75%]">
-                <div>
-                    <!------------------ card 1 ------------------>
+            <div class="w-full md:w-[75%]">
+                <div >
+                    <!------------------ -------------------------------
+                        --------------------------card triangle ----------------
+                        ------------------------------------------------->
                     <div class="card w-full bg-base-100 shadow-xl border-2">
                         <figure class="px-10 pt-10 mb-4">
                             <img src="images/triangle.png" alt="Triangle"
@@ -89,9 +93,29 @@
                                 <input class="bg-slate-200 w-20 rounded px-3 placeholder-gray-800" type="text" placeholder="b">
                                 <p>cm</p>
                                 <input class="bg-slate-200 w-20 rounded px-3 placeholder-gray-800" type="text" placeholder="h">
-                            
                                 <p>cm</p>
-
+                            </div>
+                            <div class="card-actions">
+                                <button class="bg-buttonBg hover:bg-buttonBgHover px-24 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------ -------------------------------
+                        --------------------------card rectangle ----------------
+                        ------------------------------------------------->
+                    <div class="card w-full bg-base-100 shadow-xl border-2">
+                        <figure class="px-10 pt-10 mb-4">
+                            <img src="images/rectangle.png" alt="Triangle"
+                                class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title font-bold text-2xl text-primary">Rectangle</h2>
+                            <p class="mb-5">Area (A) = w x l</p>
+                            <div class="flex  gap-2 mb-10">
+                                <input class="bg-slate-200 w-20 rounded px-3 placeholder-gray-800" type="text" placeholder="w">
+                                <p>cm</p>
+                                <input class="bg-slate-200 w-20 rounded px-3 placeholder-gray-800" type="text" placeholder="l">
+                                <p>cm</p>
                             </div>
                             <div class="card-actions">
                                 <button class="bg-buttonBg hover:bg-buttonBgHover px-24 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
