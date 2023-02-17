@@ -23,7 +23,7 @@
                 fontFamily: {
                     'custom': ['Inter', 'sans-serif'],
                 },
-            extend: {
+                extend: {
 
                     colors: {
                         buttonBg: '#1090D8',
@@ -54,20 +54,61 @@
                 </a>
             </div>
             <div class="flex items-center">
-                    <a href="#">
-                        <button class=" bg-buttonBg hover:bg-buttonBgHover px-9 py-3 rounded-lg text-white text-xl font-bold ">
-                            Blog
-                        </button>
-                    </a>
-                    
-                
+                <a href="#">
+                    <button
+                        class=" bg-buttonBg hover:bg-buttonBgHover px-9 py-3 rounded-lg text-white text-xl font-bold ">
+                        Blog
+                    </button>
+                </a>
+
+
             </div>
         </div>
 
-    </header class="m-12">
+    </header>
 
     <!-- main -->
-    <main>
+    <main class="m-12">
+        <div class="flex">
+
+            <!-- ---------------------------------------------
+            -----------------------card container---------------
+        ---------------------------------------------------- -->
+            <div class="w-[75%]">
+                <div>
+                    <!------------------ card 1 ------------------>
+                    <div class="card w-full bg-base-100 shadow-xl border-2">
+                        <figure class="px-10 pt-10 mb-4">
+                            <img src="images/triangle.png" alt="Triangle"
+                                class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title font-bold text-2xl text-primary">Triangle</h2>
+                            <p class="mb-5">Area (A) = 0.5 x b x h</p>
+                            <div class="flex  gap-2 mb-10">
+                                <input class="bg-slate-200 w-20 rounded px-3 placeholder-gray-800" type="text" placeholder="b">
+                                <p>cm</p>
+                                <input class="bg-slate-200 w-20 rounded px-3 placeholder-gray-800" type="text" placeholder="h">
+                            
+                                <p>cm</p>
+
+                            </div>
+                            <div class="card-actions">
+                                <button class="bg-buttonBg hover:bg-buttonBgHover px-24 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------------------------------------
+            ------------------------- calculation area----------------
+        ------------------------------------------------------------ -->
+            <div class="w-[25%]">
+
+            </div>
+
+        </div>
 
     </main>
 
