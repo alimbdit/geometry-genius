@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no><!-- css link -->
+    <link rel=" stylesheet" href="styles/style.css">
+    <!-- daisyui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Frequently Asked Questions</title>
+    <style>
+        span {
+            font-weight: 800;
+
+
+        }
+    </style>
+
+<script>
+    tailwind.config = {
+        theme: {
+            fontFamily: {
+                'custom': ['Inter', 'sans-serif'],
+                
+            },
+            extend: {
+
+                colors: {
+                    buttonBg: '#1090D8',
+                    buttonBgHover: '#36b1f7',
+                    title1: 'rgba(17, 17, 17, 0.8)',
+                    title2: 'rgba(17, 17, 17, 0.6)',
+                    primary: '#414141',
+                }
+            }
+        }
+    }
+</script>
+</head>
+
+<body class="w-full max-w-[1820px] font-custom">
+    <!-- header -->
+    <header class="m-5 md:m-12  ">
+        <!-- ------------------------------------------------------
+        --------------------navbar-------------------------------
+    ----------------------------------------------------------- -->
+        <section class="navbar bg-sky-200 px-12 py-5 rounded flex flex-col md:flex-row justify-between gap-5">
+
+            <div class="flex-1">
+                <a class=" normal-case text-xl">
+                    <div>
+                        <h1 class="text-4xl text-title1 text-center md:text-left font-bold ">Interactive</h1>
+                        <h4 class="text-title2 text-3xl font-medium text-center md:text-left">Geometry Genius</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="flex items-center">
+                <a href="index.html">
+                    <button
+                        class=" bg-buttonBg hover:bg-buttonBgHover px-9 py-3 rounded-lg text-white text-xl font-bold ">
+                        Blog
+                    </button>
+                </a>
+
+
+            </div>
+
+        </section>
+
+    </header>
+
+
+    <!-- ---------------------- main ----------- -->
+    <main>
+        <h1 class="font-bold text-4xl mt-8 text-center text-teal-900">Simple Question Answer</h1>
+        <section class="p-12">
+            <div class="border-2 rounded-lg p-5 mb-10 bg-orange-100">
+                <h1 class="font-bold text-teal-900">1. What is DOM and what is the purpose of DOM?</h1>
+                <p class="text-gray-500"><span>Ans:</span> Document Object Model (DOM) is the abbreviation for the programming interface for web content. It displays the nodes, or logical structure, of texts.
+
+
+                    Programmers can create and construct documents, navigate their structure, and add, alter, or delete elements and information using the Document Object Model. With a few exceptions, anything present in an HTML or XML document can be read, altered, removed, or added using the Document Object Model.
+                </p>
+            </div>
+
+            <div class="border-2 rounded-lg p-5 mb-10 bg-orange-100">
+                <h1 class="font-bold text-teal-900">2. How will you select HTML elements using DOM? Name the DOM
+                    methods.</h1>
+                <p class="text-gray-500"><span>Ans:</span>With selectors, there are five different ways to choose an element from a DOM. these are:
+                <ul class="text-gray-500 list-disc px-16">
+                    <li>etElementById()</li>
+                    <li>getElementsByTagName()</li>
+                    <li>getElementsByClassName()</li>
+                    <li>querySelectorAll()</li>
+                    <li>querySelector()</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="border-2 rounded-lg p-5 mb-10 bg-orange-100">
+                <h1 class="font-bold text-teal-900">3. What is event bubble?</h1>
+                <p class="text-gray-500"><span>Ans:</span> Event bubbling is a type of DOM event propagation.This particular event starts out by triggering on the deepest target element and progresses through the target element's parents in the same nesting hierarchy until it reaches the outermost DOM element or document object. It is one method the browser uses to handle events. Events are things the user does, like clicking a button or changing a field, for example. When a specific type of user interface event occurs, such as when a button has been clicked or a webpage has finished loading, code is executed using event handlers.</p>
+            </div>
+
+            <div class="border-2 rounded-lg p-5 mb-10 bg-orange-100">
+                <h1 class="font-bold text-teal-900">4. What is a callback function and why will you use it?</h1>
+                <p class="text-gray-500"><span>Ans:</span> In Javascript, a function that receives an argument from another function is known as a callback function. It is then invoked within the parent function to finish a process or operation. To explain it more simply, it is a function that will be called (performed) after its parent function, the function into which it is supplied as an argument, has finished running.</p>
+            </div>
+
+
+
+
+        </section>
+    </main>
+
+</body>
+
+</html>
