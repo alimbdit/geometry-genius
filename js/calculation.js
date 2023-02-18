@@ -24,8 +24,9 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
     const container = document.getElementById("table-container");
     const tr = document.createElement("tr")
     tr.innerHTML = `
-    <td>${count}</td>
-    <td>${area}</td>
+    <td>${count+'. Triangle'}</td>
+    <td>${area + " cm&#178;"}</td>
+    <td class=""><button  class="bg-buttonBg hover:bg-buttonBgHover px-4 py-2 rounded-lg text-white  flex items-center">Convert to m<sup>2</sup></button></td>
     `;
 
     container.appendChild(tr);
