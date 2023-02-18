@@ -52,7 +52,7 @@
         <!-- ------------------------------------------------------
         --------------------navbar-------------------------------
     ----------------------------------------------------------- -->
-        <div class="navbar bg-sky-200 px-12 py-5 rounded flex flex-col md:flex-row justify-between gap-5">
+        <section class="navbar bg-sky-200 px-12 py-5 rounded flex flex-col md:flex-row justify-between gap-5">
            
             <div class="flex-1">
                 <a class=" normal-case text-xl">
@@ -73,13 +73,15 @@
 
             </div>
 
-        </div>
+        </section>
 
     </header>
 
     <!-- main -->
     <main class="m-5 md:m-12">
-        <div class="flex flex-col md:flex-row gap-5">
+
+        <!-- ----------------------------- -->
+        <section class="flex flex-col md:flex-row gap-5">
 
             <!-- ---------------------------------------------
             -----------------------card container---------------
@@ -120,13 +122,13 @@
                             <h2 class="card-title font-bold text-2xl text-primary">Rectangle</h2>
                             <p class="mb-5">Area (A) = w x l</p>
                             <div class="flex items-center item- gap-2 mb-10">
-                                <input class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="w">
+                                <input id="rectangle-w" class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="w">
                                 <p>cm</p>
-                                <input class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="l">
+                                <input id="rectangle-l" class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="l">
                                 <p>cm</p>
                             </div>
                             <div class="card-actions">
-                                <button class="bg-buttonBg hover:bg-buttonBgHover px-14 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
+                                <button id="rectangle-btn" class="bg-buttonBg hover:bg-buttonBgHover px-14 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
                             </div>
                         </div>
                     </div>
@@ -231,8 +233,8 @@
 
                         <!-- ---------------------------------------
                         ------------------calculation table -->
-                        <div class="overflow-x-auto">
-                            <table class="table table-auto">
+                        <div class="overflow-x-auto mx-auto">
+                            <table class="  table-auto w-full">
                               <!-- head -->
                               <!-- <thead>
                                 <tr>
@@ -254,12 +256,14 @@
                 </div>
             </div>
 
-        </div>
+        </section>
 
     </main>
 
     <script src="js/utilities.js"></script>
     <script src="js/calculation.js"></script>
+    <script src="js/cardhover.js"></script>
+    <script src="js/rectangle.js"></script>
 
 </body>
 
