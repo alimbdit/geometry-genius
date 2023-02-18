@@ -192,6 +192,53 @@ document.getElementById("rhombus-btn").addEventListener("click", function () {
   }
 
 });
+//------------------------------- calculation for pentagon-----------------
+
+
+document.getElementById("pentagon-btn").addEventListener("click", function () {
+  const typePentagon = .5;
+  const product = getInputFieldValue("pentagon-p", "pentagon-b");
+  const area = calculateArea(product, typePentagon);
+  count += 1;
+  if (area == "negative") {
+    alert("Your input should not be negative!!!");
+  } else if (area == "oneValue") {
+    alert(
+      "You have  entered only one valid input value. Please enter another one!!!"
+    );
+  } else if (area == "string") {
+    alert("You should enter two number.!!!");
+  } else {
+  }
+
+  const container = document.getElementById("table-container");
+  const tr = document.createElement("tr");
+  // tr.setAttribute('id', 'table-row');
+
+  tr.innerHTML = `
+    <td>${count + ". Pentagon"}</td>
+    <td>${area + " cm&#178;"}</td>
+    <td class="text-center"><button  class="convert-btn bg-buttonBg hover:bg-buttonBgHover px-4 py-2 my-1 rounded-lg text-white items-right">cm<sup>2</sup> to m<sup>2</sup></button></td>
+    `;
+
+  container.appendChild(tr);
+
+  //  const elements = document.querySelectorAll(".convert-btn");
+  const prntNode = document.getElementById("table-container");
+  const nodes = prntNode.children;
+  for (const node of nodes) {
+    node.children[2].children[0].addEventListener("click", function (event) {
+      // console.log(event.target.parentNode.parentNode);
+      let textValue = event.target.parentNode.parentNode.children[1].innerText;
+      const areaCmString = textValue.substring(0, textValue.indexOf(" cm"));
+      const areaInMeter = convertCmToM(areaCmString);
+      event.target.parentNode.parentNode.children[1].innerHTML = `${areaInMeter + " m&#178;"}` ;
+      console.log(areaInMeter);
+      // console.log(event.target.parentNode.parentNode.children[1].innerText);
+    });
+  }
+
+});
 
 
 
