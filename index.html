@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <!-- css link -->
     <link rel="stylesheet" href="styles/style.css">
     <!-- daisyui link -->
@@ -79,18 +79,18 @@
 
     <!-- main -->
     <main class="m-5 md:m-12">
-        <div class="flex flex-col md:flex-row">
+        <div class="flex flex-col md:flex-row gap-5">
 
             <!-- ---------------------------------------------
             -----------------------card container---------------
         ---------------------------------------------------- -->
-            <div class="w-full md:w-[75%]">
-                <div >
+            <div class="w-full md:w-[70%]">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3" >
                     <!------------------ -------------------------------
                         --------------------------card triangle ----------------
                         ------------------------------------------------->
                     <div class="card w-full bg-base-100 shadow-xl border-2">
-                        <figure class="px-10 pt-10 mb-4">
+                        <figure class="px-10 pt-10 mb-4 h-full">
                             <img src="images/triangle.png" alt="Triangle"
                                 class="rounded-xl" />
                         </figure>
@@ -98,13 +98,13 @@
                             <h2 class="card-title font-bold text-2xl text-primary">Triangle</h2>
                             <p class="mb-5">Area (A) = 0.5 x b x h</p>
                             <div class="flex items-center item-  gap-2 mb-10">
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="b">
+                                <input id="triangle-b" class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="b">
                                 <p>cm</p>
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="h">
+                                <input id="triangle-h" class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="h">
                                 <p>cm</p>
                             </div>
-                            <div class="card-actions">
-                                <button class="bg-buttonBg hover:bg-buttonBgHover px-24 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
+                            <div class="card-actions ">
+                                <button id="triangle-btn" class="bg-buttonBg hover:bg-buttonBgHover px-16 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                         --------------------------card rectangle ----------------
                         ------------------------------------------------->
                     <div class="card w-full bg-base-100 shadow-xl border-2">
-                        <figure class="px-10 pt-10 mb-4">
+                        <figure class="px-10 pt-10 mb-4 h-full">
                             <img src="images/rectangle.png" alt="Triangle"
                                 class="rounded-xl" />
                         </figure>
@@ -120,13 +120,13 @@
                             <h2 class="card-title font-bold text-2xl text-primary">Rectangle</h2>
                             <p class="mb-5">Area (A) = w x l</p>
                             <div class="flex items-center item- gap-2 mb-10">
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="w">
+                                <input class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="w">
                                 <p>cm</p>
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="l">
+                                <input class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="l">
                                 <p>cm</p>
                             </div>
                             <div class="card-actions">
-                                <button class="bg-buttonBg hover:bg-buttonBgHover px-24 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
+                                <button class="bg-buttonBg hover:bg-buttonBgHover px-16 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                         --------------------------card Parallelogram ----------------
                         ------------------------------------------------->
                     <div class="card w-full bg-base-100 shadow-xl border-2">
-                        <figure class="px-10 pt-10 mb-4">
+                        <figure class="px-10 pt-10 mb-4 h-full">
                             <img src="images/parallelogram.png" alt="Triangle"
                                 class="rounded-xl" />
                         </figure>
@@ -142,13 +142,13 @@
                             <h2 class="card-title font-bold text-2xl text-primary">Parallelogram</h2>
                             <p class="mb-5">Area (A) = b x h</p>
                             <div class="flex items-center item- gap-2 mb-10">
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="b">
+                                <input class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="b">
                                 <p>cm</p>
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="h">
+                                <input class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="h">
                                 <p>cm</p>
                             </div>
                             <div class="card-actions">
-                                <button class="bg-buttonBg hover:bg-buttonBgHover px-24 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
+                                <button class="bg-buttonBg hover:bg-buttonBgHover px-16 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
                             </div>
                         </div>
                     </div>
@@ -156,21 +156,21 @@
                         --------------------------card Rhombus ----------------
                         ------------------------------------------------->
                     <div class="card w-full bg-base-100 shadow-xl border-2">
-                        <figure class="px-10 pt-10 mb-4">
+                        <figure class="px-10 pt-10 mb-4 h-full">
                             <img src="images/rhombus.png" alt="Triangle"
-                                class="rounded-xl" />
+                                class="rounded-xl " />
                         </figure>
                         <div class="card-body items-center text-center">
                             <h2 class="card-title font-bold text-2xl text-primary">Rhombus</h2>
                             <p class="mb-5">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
                             <div class="flex items-center item- gap-2 mb-10">
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="d&#8321;">
+                                <input class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="d&#8321;">
                                 <p>cm</p>
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="d&#8322;">
+                                <input class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="d&#8322;">
                                 <p>cm</p>
                             </div>
                             <div class="card-actions">
-                                <button class="bg-buttonBg hover:bg-buttonBgHover px-24 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
+                                <button class="bg-buttonBg hover:bg-buttonBgHover px-16 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
                             </div>
                         </div>
                     </div>
@@ -178,43 +178,43 @@
                         --------------------------card Pentagon ----------------
                         ------------------------------------------------->
                     <div class="card w-full bg-base-100 shadow-xl border-2">
-                        <figure class="px-10 pt-10 mb-4">
+                        <figure class="px-10 pt-10 mb-4 h-full">
                             <img src="images/pentagon.png" alt="Triangle"
-                                class="rounded-xl" />
+                                class="rounded-xl h-5/6" />
                         </figure>
                         <div class="card-body items-center text-center">
                             <h2 class="card-title font-bold text-2xl text-primary">Pentagon</h2>
                             <p class="mb-5">Area (A) = 0.5 x p x b</p>
                             <div class="flex items-center gap-2 mb-10">
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1  placeholder-gray-800" type="text" placeholder="p">
+                                <input class="bg-slate-200 w-16 rounded px-3 py-1  placeholder-gray-800" type="text" placeholder="p">
                                 <p>cm</p>
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="b">
+                                <input class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="b">
                                 <p>cm</p>
                             </div>
                             <div class="card-actions">
-                                <button class="bg-buttonBg hover:bg-buttonBgHover px-24 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
+                                <button class="bg-buttonBg hover:bg-buttonBgHover px-16 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
                             </div>
                         </div>
                     </div>
                     <!------------------ -------------------------------
                         --------------------------card Ellipse ----------------
                         ------------------------------------------------->
-                    <div class="card w-full bg-base-100 shadow-xl border-2">
-                        <figure class="px-10 pt-10 mb-4">
+                    <div class="card w-full bg-base-100 shadow-xl border-2 ">
+                        <figure class="px-10 pt-10 mb-4  h-full py-auto">
                             <img src="images/ellipse.png" alt="Triangle"
-                                class="rounded-xl" />
+                                class="rounded-xl " />
                         </figure>
                         <div class="card-body items-center text-center">
                             <h2 class="card-title font-bold text-2xl text-primary">Ellipse</h2>
                             <p class="mb-5">Area (A) = <span class="text-2xl ">&pi;</span>ab</p>
                             <div class="flex items-center gap-2 mb-10">
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1  placeholder-gray-800" type="text" placeholder="p">
+                                <input class="bg-slate-200 w-16 rounded px-3 py-1  placeholder-gray-800" type="text" placeholder="a">
                                 <p>cm</p>
-                                <input class="bg-slate-200 w-20 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="b">
+                                <input class="bg-slate-200 w-16 rounded px-3 py-1 placeholder-gray-800" type="text" placeholder="b">
                                 <p>cm</p>
                             </div>
                             <div class="card-actions">
-                                <button class="bg-buttonBg hover:bg-buttonBgHover px-24 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
+                                <button class="bg-buttonBg hover:bg-buttonBgHover px-16 py-3 mb-4 rounded-lg text-white text-xl font-bold ">Calculate</button>
                             </div>
                         </div>
                     </div>
@@ -224,13 +224,47 @@
             <!-- --------------------------------------------------
             ------------------------- calculation area----------------
         ------------------------------------------------------------ -->
-            <div class="w-[25%]">
+            <div class="w-full md:w-[30%]">
+                <div>
+                    <div class="border-2 rounded-lg py-8 px-5 min-h-[450px]">
+                        <h2 class="text-center underline font-bold text-xl text-title1 mb-10">Area Calculation</h2>
 
+                        <!-- ---------------------------------------
+                        ------------------calculation table -->
+                        <div class="overflow-x-auto">
+                            <table class="table w-full">
+                              <!-- head -->
+                              <!-- <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>Name</th>
+                                  <th>Job</th>
+                                  <th>Color</th>
+                                </tr>
+                              </thead> -->
+                              <tbody id="table-container">
+                                <!-- row 1 -->
+                                <tr>
+                                  <th>1</th>
+                                  <td>Ganderton</td>
+                                  <td>Quality</td>
+                                  <td>Blue</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+
+                    </div>
+                </div>
             </div>
 
         </div>
 
     </main>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/calculation.js"></script>
 
 </body>
 
