@@ -1,9 +1,13 @@
+
+
 // get value by id and make product
 
 function getInputFieldValue(id1, id2) {
-  const firstValueString = document.getElementById(id1).value;
+  let firstValueString = document.getElementById(id1).value;
+  document.getElementById(id1).value = '';
   const firstValue = parseFloat(firstValueString);
   const secondValueString = document.getElementById(id2).value;
+  document.getElementById(id2).value = '';
   const secondValue = parseFloat(secondValueString);
 
   if (!isNaN(firstValue) && !isNaN(secondValue)) {
@@ -54,12 +58,38 @@ function convertCmToM(value){
             return Number(areaM);
           }
     }
-
-    
-
-
 }
 
+
+// -----------------create table row----------
+
+function tableRow(area, count, type){
+  const container = document.getElementById("table-container");
+
+    const tr = document.createElement("tr");
+
+
+    tr.innerHTML = `
+    <td>${count + ". " + type}</td>
+    <td class="text-center">${area + " cm&#178;"}</td>
+    <td class="text-center"><button id="convert-btn-${count}"  class="convert-btn bg-buttonBg hover:bg-buttonBgHover px-4 py-2 my-1 rounded-lg text-white items-right">cm<sup>2</sup> to m<sup>2</sup></button></td>
+    `;
+
+    container.appendChild(tr);
+}
+
+// function cmToM (value){
+//   const mSquire = (value * 0.0001);
+//   if(mSquire < 1){
+//     return mSquire.toFixed(4);
+//   }
+//   else{
+//     const mSquire.toFixed(2);
+//   }
+//   return mSquire.;
+  
+  
+// }
 
 //  card mouse enter random background
 
